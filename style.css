@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-brand img {
+  width: 90px;
+  border-radius: 20px;
+}
+
+/* Home Section */
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #f8f9fa; /* Light background */
+  color: #333;
+  overflow: hidden; /* Ensure animations don't overflow */
+}
+
+#home a {
+  position: absolute;
+  bottom: 20px;
+}
+
+#home .container {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Text Animations for Home Section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#home h1 {
+  animation: fadeIn 1.5s ease-out;
+}
+
+#home h2 {
+  animation: slideInLeft 3s ease-out;
+}
+
+#home h3 {
+  animation: slideInRight 3s ease-out;
+}
+
+/* Button Hover Effect */
+#home .btn {
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#home .btn:hover {
+  transform: scale(1.1); /* Slightly scale up */
+  background-color: #0056b3; /* Darker blue */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+/* About Section */
+#about .container .row .col-md-6 img {
+  height: 350px;
+  border-radius: 10px;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+#about .container p {
+  font-family: "Crimson Text", serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Services Section */
+#services .container h2 {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#services .container .row h3 {
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+#services .container .row p {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2;
+}
+
+/* Product Section - Card Animations */
+#product .container h2 {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#product .container .row h5 {
+  font-family: "Crimson Text", serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 24px;
+}
+
+#product .container .row p {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+#product .card {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#product .card:hover {
+  transform: translateY(-10px) rotate(2deg); /* Lift and tilt */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+#product .card img {
+  transition: transform 0.5s ease;
+}
+
+#product .card:hover img {
+  transform: scale(1.1); /* Zoom in image */
+}
+
+/* Footer Section */
+footer .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media div img {
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+section {
+  padding: 60px 0;
+  min-height: 90vh;
+}
+
+section .row .col-md-4 {
+  margin-bottom: 20px;
+}
+
+section .row .col-md-4 img {
+  width: 100%;
+  height: 200px;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #343a40;
+}
