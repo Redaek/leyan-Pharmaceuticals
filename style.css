@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.navbar{
+  background-color: black !important;
+}
 .navbar-brand img {
   width: 90px;
   border-radius: 20px;
@@ -15,13 +17,16 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background: #f8f9fa; /* Light background */
-  color: #333;
+  background-color: #1A1A1A !important;
+  color: #fff;
   overflow: hidden; /* Ensure animations don't overflow */
+
 }
 
 #home a {
   position: absolute;
+  left: 44%;
+  
   bottom: 20px;
 }
 
@@ -63,7 +68,6 @@
     opacity: 1;
   }
 }
-
 #home h1 {
   animation: fadeIn 1.5s ease-out;
 }
@@ -88,10 +92,15 @@
 }
 
 /* About Section */
+#about{
+  background-color: #0D0D0D;
+  color: #fff;
+  display: none;
+}
 #about .container .row .col-md-6 img {
   height: 350px;
   border-radius: 10px;
-  margin-left: 80px;
+  margin-left: 40px;
   margin-top: 20px;
 }
 
@@ -104,6 +113,11 @@
 }
 
 /* Services Section */
+#services{
+  background-color: #1A1A1A!important;
+  color:#fff;
+  display: none;
+}
 #services .container h2 {
   font-family: "Crimson Text", serif;
   font-weight: 700;
@@ -124,6 +138,11 @@
 }
 
 /* Product Section - Card Animations */
+#product{
+  background-color: #0D0D0D;
+  color: #fff;
+  display: none;
+}
 #product .container h2 {
   font-family: "Crimson Text", serif;
   font-weight: 700;
@@ -149,6 +168,8 @@
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   overflow: hidden;
+  background-color: #121212;
+  color: #fff;
 }
 
 #product .card:hover {
@@ -165,6 +186,7 @@
 }
 
 /* Footer Section */
+
 footer .social-media {
   display: flex;
   align-items: center;
@@ -195,11 +217,90 @@ section .row .col-md-4 img {
   width: 100%;
   height: 200px;
 }
-
+.whats-up img{
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
 .navbar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-  background-color: #343a40;
+  background-color: #1A1A1A;
+  display: none;
+}
+
+/* Base styles for sections */
+/* Base styles for all sections */
+#about, #services , #product , #footer {
+  display: none; /* Start hidden */
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+}
+
+/* Show sections with animations */
+#about {
+  animation: slideInLeft 5s ease forwards;
+}
+
+#services {
+  animation: slideInRight 5s ease forwards;
+}
+
+#product {
+  animation: fadeInBounce 6s ease forwards;
+}
+
+#footer {
+  animation: rotateScale 7s ease forwards;
+}
+
+/* Keyframes for animations */
+@keyframes slideInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes fadeInBounce {
+  0% {
+      opacity: 0;
+      transform: scale(0.5);
+  }
+  60% {
+      opacity: 1;
+      transform: scale(1.1);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes rotateScale {
+  from {
+      opacity: 0;
+      transform: rotate(-180deg) scale(0);
+  }
+  to {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+  }
 }
