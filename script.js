@@ -10,7 +10,7 @@ const footer = document.getElementById("footer")
 
 
 window.addEventListener("scroll", ()=>{
-    if(window.scrollY >50){
+    if(window.scrollY >40){
         about.style.display = "block"
       
     }

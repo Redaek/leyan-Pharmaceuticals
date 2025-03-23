@@ -241,15 +241,15 @@ footer {
 
 /* Show sections with animations */
 #about {
-  animation: slideInLeft 5s ease forwards;
+  animation: slideInLeft 7s ease forwards;
 }
 
 #services {
-  animation: slideInRight 5s ease forwards;
+  animation: slideInRight 7s ease forwards;
 }
 
 #product {
-  animation: fadeInBounce 6s ease forwards;
+  animation: fadeInBounce 7s ease forwards;
 }
 
 #footer {
