@@ -1,12 +1,40 @@
-const docs = document.getElementsByTagName("section");
+const docsOF = document.getElementsByTagName("section");
 const home= document.getElementById("home")
 const about = document.getElementById("about")
 const serv = document.getElementById("services")
 const product = document.getElementById("product")
 const footer = document.getElementById("footer")
 
+const aboutBurger = document.getElementById("about-bur");
+const servicesBurger = document.getElementById("services-bur");
+const productBurger = document.getElementById("product-bur");
+const contactBurger = document.getElementById("contact-bur");
 
 
+aboutBurger.addEventListener("click", ()=>{
+about.style.display = "block"
+})
+servicesBurger.addEventListener("click", () => {
+   window.scrollTo({
+      top: 1300,
+      behavior: "smooth" // Optional: adds smooth scrolling
+   });
+   // servicesBurger.style.display = "block";
+});
+
+
+productBurger.addEventListener("click", ()=>{
+      window.scrollTo({
+         top:2000,
+         behavior : "smooth"
+      })
+      })
+ contactBurger.addEventListener("click", ()=>{
+      window.scrollTo({
+         top : 3200,
+         behavior : "smooth"
+      })
+         })
 
 
 window.addEventListener("scroll", ()=>{
