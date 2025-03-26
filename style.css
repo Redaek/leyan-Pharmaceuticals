@@ -24,10 +24,12 @@
 }
 
 #home a {
-  position: absolute;
-  left: 44%;
   
-  bottom: 20px;
+margin: auto;
+display: block;
+width: 150px;
+position: relative;
+top: 120px;
 }
 
 #home .container {
@@ -95,19 +97,21 @@
 #about{
   background-color: #0D0D0D;
   color: #fff;
-  display: none;
-}
-#about .container .row .col-md-6 img {
-  height: 350px;
-  border-radius: 10px;
-  margin-left: 40px;
-  margin-top: 20px;
-}
-
-#about .container p {
-  font-family: "Crimson Text", serif;
-  font-weight: 300;
+  font-family: "Playfair Display", serif;
   font-style: italic;
+  padding: 10px 20px ;
+}
+#about .row .card{
+  margin-right: 20px;
+  
+}
+#about .row .card img{
+  height: 100%;
+  
+}
+#about .row .card p{
+  padding: 15px;
+  margin: 8px;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -116,12 +120,14 @@
 #services{
   background-color: #1A1A1A!important;
   color:#fff;
-  display: none;
+  
+  /* display: none; */
 }
 #services .container h2 {
   font-family: "Crimson Text", serif;
   font-weight: 700;
   font-style: italic;
+  
 }
 
 #services .container .row h3 {
@@ -136,12 +142,27 @@
   font-style: normal;
   line-height: 2;
 }
+#services .container h2:hover{
+  color: aqua;
+  transform: translateY(10px);
+  font-size: 40px;
+}
+#services .container .row .col-md-4:hover{
+  color: aqua;
+  transform: translateY(5px);
+}
+#services .container .row .col-md-4 .btn{
+   display: block;
+   margin: auto;
+   width: 150px;
+   margin-top: 20px;
 
+}
 /* Product Section - Card Animations */
 #product{
   background-color: #0D0D0D;
   color: #fff;
-  display: none;
+  /* display: none; */
 }
 #product .container h2 {
   font-family: "Crimson Text", serif;
@@ -202,6 +223,7 @@ footer .social-media {
 
 body {
   font-family: Arial, sans-serif;
+  min-height: 400vh;
 }
 
 section {
@@ -228,31 +250,31 @@ section .row .col-md-4 img {
 
 footer {
   background-color: #1A1A1A;
-  display: none;
+  /* display: none; */
 }
 
 /* Base styles for sections */
 /* Base styles for all sections */
 #about, #services , #product , #footer {
-  display: none; /* Start hidden */
-  opacity: 0; /* Start fully transparent */
+  /* display: none; Start hidden */
+  opacity: 1; /* Start fully transparent */
   transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
 }
 
 /* Show sections with animations */
-#about {
+.about {
   animation: slideInLeft 7s ease forwards;
 }
 
-#services {
+.services {
   animation: slideInRight 7s ease forwards;
 }
 
-#product {
+.product {
   animation: fadeInBounce 7s ease forwards;
 }
 
-#footer {
+.footer {
   animation: rotateScale 7s ease forwards;
 }
 
@@ -304,6 +326,11 @@ footer {
       transform: rotate(0) scale(1);
   }
 }
-body{
-  min-height: 400vh;
+.obs{
+  opacity: 0 !important;
+}
+.obs.show{
+  opacity: 1 !important;
+  transform: scale(1);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
